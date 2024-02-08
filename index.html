@@ -5,7 +5,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/main.css">
-    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+
+
     <title>Point and click adventure</title>
 </head>
 
@@ -18,23 +22,34 @@
 
     <div id="gameWindow">
         <div id="dialogBar" class="foreground">
-                <div id="setMainDialog">
-                    <div id="mainCharacterSpeech" class="foreground"></div>
-                    <div id="counterSpeech" class="foreground"></div>
-                    <div id="brownBar"></div>
-                </div>
+            <div id="setMainDialog">
+                <div id="mainCharacterSpeech" class="foreground"></div>
+                <div id="counterSpeech" class="foreground"></div>
+                <div id="brownBar"></div>
+            </div>
         </div>
-        
 
-        <div id="inventoryBox">
+
+        <div id="inventoryBox" class="foreground">
             <p>Inventory</p>
             <ul id inventoryList>
             </ul>
         </div>
-        <img src="Assets/assets/tilemap1.jpg" alt="map1">
+
+        <div id="door1" class="foreground"></div>
+        <div id="sign" class="foreground"></div>
+
+        <div id="mainCharacter" class="heroCharacter">
+
+        </div>
+
+        <!--background-->
+        <div id="tilemap" class="background">
+            <img src="Assets/assets/tilemap1.jpg" draggable="false" class="background">
+        </div>
     </div>
 
-    
+
     <div id="elementClass" class="element"></div>
 
     <script src="js/main.js"></script>
