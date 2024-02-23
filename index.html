@@ -7,53 +7,61 @@
     <link rel="stylesheet" href="css/main.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inika:wght@400;700&family=Protest+Riot&display=swap"
+        rel="stylesheet">
 
-
-    <title>Point and click adventure</title>
+    <title>point and click adventure</title>
 </head>
 
 <body>
     <div id="title">
-        <div id="main">
-            <h1 id="mainTitle"></h1>
-        </div>
+        <h1 id="mainTitle"></h1>
     </div>
 
     <div id="gameWindow">
+        <!--dialog bar-->
         <div id="dialogBar" class="foreground">
             <div id="setMainDialog">
-                <div id="mainCharacterSpeech" class="foreground"></div>
-                <div id="counterSpeech" class="foreground"></div>
+                <div id="mainCharacterAvatar" class="foreground">
+                    <img src="Assets/assets/portairt.png" alt="avatar">
+                </div>
+
+                <div id="mainCharacterSpeech" class="foreground speech-bubble">...</div>
+                <div id="counterSpeech" class="foreground speech-bubble">...</div>
+                <div id="counterAvatar" class="foreground">
+                    <img id="counterAvatarImg" src="Assets/assets/portairStatue.png" alt="counterAvatar">
+                </div>
                 <div id="brownBar"></div>
             </div>
         </div>
 
-
+        <!-- inventory -->
         <div id="inventoryBox" class="foreground">
             <p>Inventory</p>
-            <ul id inventoryList>
+            <ul id="inventoryList">
+
             </ul>
+
         </div>
 
+        <!--Foreground items-->
         <div id="key1" class="foreground"></div>
         <div id="door1" class="foreground"></div>
         <div id="door2" class="foreground"></div>
+        <div id="statue" class="foreground"></div>
+
         <div id="sign" class="foreground"></div>
 
+        <!--Main character-->
         <div id="mainCharacter" class="heroCharacter">
-
+            <img src="Assets/assets/animated-character-1-idle.gif" draggable="false" alt="main character">
         </div>
 
-        <!--background-->
+        <!--Background-->
         <div id="tilemap" class="background">
-            <img src="Assets/assets/tilemap1.jpg" draggable="false" class="background">
+            <img id="mcImage" src="Assets/assets/tilemap1.jpg" draggable="false" alt="tilemap level 1">
         </div>
     </div>
-
-
-    <div id="elementClass" class="element"></div>
-
     <script src="js/main.js"></script>
 </body>
 
